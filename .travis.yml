@@ -1,0 +1,18 @@
+sudo: false
+language: go
+
+go:
+    - 1.4
+    - tip
+
+services:
+    - postgresql
+    - make
+
+before_script:
+    - createdb intego
+
+script:
+    - go get
+    - go test ./...
+    - go build
