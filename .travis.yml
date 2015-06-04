@@ -6,7 +6,6 @@ go:
 
 services:
     - postgresql
-    - make
 
 before_script:
     - createdb intego
